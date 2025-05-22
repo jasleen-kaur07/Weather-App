@@ -5,28 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Weather App</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 <body>
-  <div class="mainContainer">
-    <div class="container">
-      <div class="header">
-        <div>Weather App</div>
+  <div class="container">
+    <div class="weather-app">
+      <h1>Weather App</h1>
+      
+      <div class="search-container">
+        <input type="text" id="cityInput" placeholder="Enter city name" />
+        <button id="searchBtn" onclick="getWeather()">
+          <i class="fas fa-search"></i> Search
+        </button>
       </div>
-      <div class="box">
-        <div class="inputContainer">
-          <input type="text" id="cityInput" placeholder="Enter city name" />
-          <button onclick="getWeather()">Get Weather</button>
+      
+      <div class="weather-card">
+        <div class="weather-header">
+          <div class="location-info">
+            <h2 id="cityName">Loading...</h2>
+            <p id="description">-</p>
+          </div>
+          <div class="weather-icon">
+            <img id="weatherIcon" src="./images/cloudy.png" alt="Weather Icon" />
+          </div>
         </div>
-        <div class="picContainer">
-          <img id="weatherIcon" src="./images/cloudy.png" alt="Weather Icon" />
+        
+        <div class="temperature-container">
+          <div class="main-temp">
+            <span id="temperature">-°C</span>
+          </div>
+          <div class="feels-like">
+            <span>Feels like: </span>
+            <span id="feelsLike">-°C</span>
+          </div>
         </div>
-        <div class="weatherDetails">
-          <h2 id="cityName">City Name</h2>
-          <p id="temperature">Temperature: --°C</p>
-          <p id="description">Description: --</p>
-          <p id="humidity">Humidity: --%</p>
-          <p id="rain">Rain: -- mm</p>
+        
+        <div class="weather-details">
+          <div class="detail">
+            <i class="fas fa-tint"></i>
+            <span>Humidity: </span>
+            <span id="humidity">-%</span>
+          </div>
+          <div class="detail">
+            <i class="fas fa-wind"></i>
+            <span>Wind: </span>
+            <span id="windSpeed">- m/s</span>
+          </div>
         </div>
+        
+        <div class="sun-times">
+          <span>Sunrise: </span>
+          <span id="sunrise">--:--</span>
+          <span> | Sunset: </span>
+          <span id="sunset">--:--</span>
+        </div>
+      </div>
+      
+      <div class="unit-toggle">
+        <button id="celsiusBtn" class="active">°C</button>
+        <button id="fahrenheitBtn">°F</button>
+      </div>
+      
+      <div id="favorites" class="favorites">
+        <h3>Favorites</h3>
+        <div id="favoritesList" class="favorites-list"></div>
       </div>
     </div>
   </div>
