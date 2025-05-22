@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="mainContainer">
-        <div class="container">
-            <div class="header">
-                <div>Weather App</div>
-            </div>
-            <div class="box">
-                <div class="picContainer">
-                    <img src="./images/cloudy.png" alt="" srcset="">
-                </div>
-            </div>
+  <div class="mainContainer">
+    <div class="container">
+      <div class="header">
+        <div>Weather App</div>
+      </div>
+      <div class="box">
+        <div class="inputContainer">
+          <input type="text" id="cityInput" placeholder="Enter city name" />
+          <button onclick="getWeather()">Get Weather</button>
         </div>
+        <div class="picContainer">
+          <img id="weatherIcon" src="./images/cloudy.png" alt="Weather Icon" />
+        </div>
+        <div class="weatherDetails">
+          <h2 id="cityName">City Name</h2>
+          <p id="temperature">Temperature: --°C</p>
+          <p id="description">Description: --</p>
+          <p id="humidity">Humidity: --%</p>
+          <p id="rain">Rain: -- mm</p>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

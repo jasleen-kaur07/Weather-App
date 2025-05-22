@@ -1,8 +1,10 @@
 .box {
     width: 350px;
-    height: 400px;
+    height: auto;
+    padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 20px;
+    background-color: #f0f0f0;
 }
 
 .mainContainer {
@@ -10,11 +12,14 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: #dcefff;
+    font-family: Arial, sans-serif;
 }
 
 .header {
     display: flex;
     justify-content: center;
+    font-weight: bold;
 }
 
 .header div {
@@ -35,4 +40,34 @@
 
 .picContainer img {
     width: 100px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.inputContainer input {
+    padding: 10px;
+    width: 80%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.inputContainer button {
+    padding: 10px;
+    width: 50%;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.weatherDetails {
+    text-align: center;
+    margin-top: 15px;
 }
